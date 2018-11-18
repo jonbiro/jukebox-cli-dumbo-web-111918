@@ -42,8 +42,30 @@ end
 def list (songs)
   songs.each_with_index do |song, index|
     puts "#{index+1}. #{song}"
-
   end
+end
 
+def exit_jukebox
+  puts "Goodbye"
+end
 
+def run
+  help
+  while true
+    puts "Please enter a command:"
+    command = gets.chomp
+    if command == "list"
+      list
+    end
+    if command == "play"
+      play
+    end
+    if command == "help"
+      help
+    end
+    if command == "exit"
+      exit_jukebox
+      return
+    end
+  end
 end
