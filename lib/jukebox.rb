@@ -19,12 +19,13 @@ def help
 end
 
 def play (songs)
+  puts "Please enter a song name or number:"
   song_name_or_number = gets.chomp
   is_number = song_name_or_number.scan(/^\d+$/).length > 0
   if is_number
     number = song_name_or_number.scan(/^\d+$/)[0].to_i
     if number > 0 && number < songs.length+1
-      return songs[number -1]
+      puts songs[number -1]
     end
   else
     songs.each do |song|
