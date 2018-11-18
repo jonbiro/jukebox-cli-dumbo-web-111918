@@ -31,7 +31,7 @@ def play (songs)
   else
     songs.each do |song|
       if song_name_or_number == song
-        puts song
+        puts "Playing #{song}"
         return
       end
     end
