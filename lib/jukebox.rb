@@ -19,7 +19,6 @@ def help
 end
 
 def play (songs)
-  puts "Please enter a song name or number:"
   song_name_or_number = gets.chomp
   is_number = song_name_or_number.scan(/^\d+$/).length > 0
   if is_number
