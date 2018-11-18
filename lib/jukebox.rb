@@ -26,6 +26,7 @@ def play (songs)
     number = song_name_or_number.scan(/^\d+$/)[0].to_i
     if number > 0 && number < songs.length+1
       puts songs[number -1]
+      return
     end
   else
     songs.each do |song|
